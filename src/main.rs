@@ -20,20 +20,21 @@ struct Opts {
 }
 
 fn main() {
-  let opts: Opts = Opts::parse();
-  match BadgeBuilder::new()
-    .message(&opts.message)
-    .label(&opts.label)
-    .color_parse(&opts.color)
-    .label_color_parse(&opts.label_color)
-    .style_parse(&opts.style)
-    .build()
-  {
-    Ok(badge) => println!("{}", badge.svg()),
-    Err(e) => clap::Error::with_description(
-      format!("Failed to build badge: {:?}", e),
-      ErrorKind::InvalidValue,
-    )
-    .exit(),
-  }
+  println!("<svg></svg>")
+  // let opts: Opts = Opts::parse();
+  // match BadgeBuilder::new()
+  //   .message(&opts.message)
+  //   .label(&opts.label)
+  //   .color_parse(&opts.color)
+  //   .label_color_parse(&opts.label_color)
+  //   .style_parse(&opts.style)
+  //   .build()
+  // {
+  //   Ok(badge) => println!("{}", badge.svg()),
+  //   Err(e) => clap::Error::with_description(
+  //     format!("Failed to build badge: {:?}", e),
+  //     ErrorKind::InvalidValue,
+  //   )
+  //   .exit(),
+  // }
 }
